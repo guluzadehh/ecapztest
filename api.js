@@ -1,4 +1,4 @@
-import { createSignature } from "./helpers.js"
+import { createSignatureFromObject } from "./helpers.js"
 import axios from "axios"
 import "dotenv/config"
 
@@ -24,7 +24,7 @@ export async function getCardToken(data)
 
 export async function cardProcess(data)
 {
-    const signature = createSignature(data, API_SECRET_KEY)
+    const signature = createSignatureFromObject(data, API_SECRET_KEY)
 
     const res = await api
         .post(
@@ -37,7 +37,7 @@ export async function cardProcess(data)
 
 export async function getTransactionStatus(data)
 {
-    const signature = createSignature(data, API_SECRET_KEY)
+    const signature = createSignatureFromObject(data, API_SECRET_KEY)
 
     const res = await api
         .post(

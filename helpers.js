@@ -1,7 +1,11 @@
 import { createHmac } from "crypto"
 
-export function createSignature(request, keyHex) {
-    const hmacData = Object.values(request).sort().join('|')
+export function createSignatureFromObject(request, keyHex) {
+  return createSignature(Object.values(request), keyHex);
+}
+
+export function createSignature(values, keyHex) {
+    const hmacData = values.sort().join('|')
     const hmacKey = Buffer.from(keyHex, 'hex')
     const hmacObj = createHmac('sha256', hmacKey)
     hmacObj.update(hmacData)
