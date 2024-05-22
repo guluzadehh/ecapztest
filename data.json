@@ -1,0 +1,27 @@
+{
+    "card_details": {
+        "number": "4244491609788988",
+        "expiration_month": "06",
+        "expiration_year": "2028",
+        "security_code": "501"
+    },
+    "process_details": {
+        "user_contact_email": "example@gmail.com",
+        "user_name": "john doe",
+        "description": "live test payment",
+        "price": "5.00",
+        "currency": "USD",
+        "order_id": "1233213123213",
+        "user_phone": "55555555555",
+        "result_url": "https://webhook.site/c608764e-156b-4a39-8a05-4d9eecf76d61",
+        "success_url": "https://webhook.site/c608764e-156b-4a39-8a05-4d9eecf76d61",
+        "failure_url": "https://example.com/failure",
+        "ip": "1.1.1.1",
+        "user_country": "PL",
+        "user_city": "Krakow",
+        "user_address": "Grodzka 26",
+        "user_state": "Krakow",
+        "user_postal_code": "31-044",
+        "user_nationality": "PL"
+    }
+}
